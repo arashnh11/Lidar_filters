@@ -1,5 +1,4 @@
 # Lidar_filters
-LIDAR Filter
 ========
 
 LIDAR Filter will provide you with useful functions to reduce noise in the data coming from a LIDAR sensor
