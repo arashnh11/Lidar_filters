@@ -1,0 +1,97 @@
+Sample Code - Brain Corporation
+LIDAR Filter
+By Arash Nemati Hayati
+May 14, 2018
+This software provides a group of LIDAR filters including a range filter and a temporal median filter
+For more information, please refer to the README file
+
+Empty case: Passed 
+1e30 reading values: Passed 
+1000 measurements per scan: Passed 
+Problem example T0 update: Passed 
+Problem example T1 update: Passed 
+Problem example T2 update: Passed 
+Problem example T3 update: Passed 
+Problem example T4 update: Passed 
+1000 measurements T999: Passed 
+Update filter N = 10, D = 20
+T0 scan: 		1	7	4	0	9	4	8	8	2	4	
+T0 Median update: 	1	7	4	0	9	4	8	8	2	4	
+T0 Range update: 	1	7	4	0.03	9	4	8	8	2	4	
+
+T1 scan: 		5	5	1	7	1	1	5	2	7	6	
+T1 Median update: 	3	6	2.5	3.5	5	2.5	6.5	5	4.5	5	
+T1 Range update: 	5	5	1	7	1	1	5	2	7	6	
+
+T2 scan: 		1	4	2	3	2	2	1	6	8	5	
+T2 Median update: 	1	5	2	3	2	2	5	6	7	5	
+T2 Range update: 	1	4	2	3	2	2	1	6	8	5	
+
+T3 scan: 		7	6	1	8	9	2	7	9	5	4	
+T3 Median update: 	3	5.5	1.5	5	5.5	2	6	7	6	4.5	
+T3 Range update: 	7	6	1	8	9	2	7	9	5	4	
+
+T4 scan: 		3	1	2	3	3	4	1	1	3	8	
+T4 Median update: 	3	5	2	3	3	2	5	6	5	5	
+T4 Range update: 	3	1	2	3	3	4	1	1	3	8	
+
+T5 scan: 		7	4	2	7	7	9	3	1	9	8	
+T5 Median update: 	4	4.5	2	5	5	3	4	4	6	5.5	
+T5 Range update: 	7	4	2	7	7	9	3	1	9	8	
+
+T6 scan: 		6	5	0	2	8	6	0	2	4	8	
+T6 Median update: 	5	5	2	3	7	4	3	2	5	6	
+T6 Range update: 	6	5	0.03	2	8	6	0.03	2	4	8	
+
+T7 scan: 		6	5	0	9	0	0	6	1	3	8	
+T7 Median update: 	5.5	5	1.5	5	5	3	4	2	4.5	7	
+T7 Range update: 	6	5	0.03	9	0.03	0.03	6	1	3	8	
+
+T8 scan: 		9	3	4	4	6	0	6	6	1	8	
+T8 Median update: 	6	5	2	4	6	2	5	2	4	8	
+T8 Range update: 	9	3	4	4	6	0.03	6	6	1	8	
+
+T9 scan: 		4	9	6	3	7	8	8	2	9	1	
+T9 Median update: 	5.5	5	2	3.5	6.5	3	5.5	2	4.5	7	
+T9 Range update: 	4	9	6	3	7	8	8	2	9	1	
+
+T10 scan: 		3	5	9	8	4	0	7	6	3	6	
+T10 Median update: 	5	5	2	4	6	2	6	2	4	6	
+T10 Range update: 	3	5	9	8	4	0.03	7	6	3	6	
+
+T11 scan: 		1	5	4	2	0	9	7	3	7	2	
+T11 Median update: 	4.5	5	2	3.5	5	3	6	2.5	4.5	6	
+T11 Range update: 	1	5	4	2	0.03	9	7	3	7	2	
+
+T12 scan: 		6	0	1	6	5	7	5	4	1	2	
+T12 Median update: 	5	5	2	4	5	4	6	3	4	6	
+T12 Range update: 	6	0.03	1	6	5	7	5	4	1	2	
+
+T13 scan: 		0	0	1	4	6	0	7	1	7	7	
+T13 Median update: 	4.5	5	2	4	5.5	3	6	2.5	4.5	6	
+T13 Range update: 	0.03	0.03	1	4	6	0.03	7	1	7	7	
+
+T14 scan: 		7	7	3	3	5	9	9	8	1	8	
+T14 Median update: 	5	5	2	4	5	4	6	3	4	6	
+T14 Range update: 	7	7	3	3	5	9	9	8	1	8	
+
+T15 scan: 		2	6	6	0	3	8	0	1	2	5	
+T15 Median update: 	4.5	5	2	3.5	5	4	6	2.5	3.5	6	
+T15 Range update: 	2	6	6	0.03	3	8	0.03	1	2	5	
+
+T16 scan: 		0	9	4	7	8	3	5	1	2	0	
+T16 Median update: 	4	5	2	4	5	4	6	2	3	6	
+T16 Range update: 	0.03	9	4	7	8	3	5	1	2	0.03	
+
+T17 scan: 		1	6	4	0	6	1	8	9	8	4	
+T17 Median update: 	3.5	5	2.5	3.5	5.5	3.5	6	2.5	3.5	5.5	
+T17 Range update: 	1	6	4	0.03	6	1	8	9	8	4	
+
+T18 scan: 		1	4	3	9	8	8	0	8	7	7	
+T18 Median update: 	3	5	3	4	6	4	6	3	4	6	
+T18 Range update: 	1	4	3	9	8	8	0.03	8	7	7	
+
+T19 scan: 		8	3	8	3	7	1	0	7	3	4	
+T19 Median update: 	3.5	5	3	3.5	6	3.5	5.5	3.5	3.5	5.5	
+T19 Range update: 	8	3	8	3	7	1	0.03	7	3	4	
+
